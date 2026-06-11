@@ -1,34 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kwillian <kwillian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/10 01:30:53 by kwillian          #+#    #+#             */
-/*   Updated: 2026/06/11 14:45:23 by kwillian         ###   ########.fr       */
+/*   Created: 2026/06/11 15:19:24 by kwillian          #+#    #+#             */
+/*   Updated: 2026/06/11 15:20:02 by kwillian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ANIMAL_HPP
-#define ANIMAL_HPP
+#include "Dog.hpp"
+#include "Cat.hpp"
+#include "Animal.hpp"
+#include "Brain.hpp"
 
-#include <iostream>
-#include <string>
-
-class Animal
+int main()
 {
-    protected:
-    std::string type;
-
-    public:
-    Animal();
-    virtual ~Animal();
-    Animal&operator=(const Animal& other);
-    Animal(const Animal&other);
-    
-    virtual void makeSound() const;;
-    std::string getType() const;
-};
-
-#endif
+    return (0);
+}
