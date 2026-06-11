@@ -6,7 +6,7 @@
 /*   By: kwillian <kwillian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/11 12:08:56 by kwillian          #+#    #+#             */
-/*   Updated: 2026/06/11 14:40:12 by kwillian         ###   ########.fr       */
+/*   Updated: 2026/06/11 20:46:52 by kwillian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@
 class Cat : public Animal
 {
     public:
-    
     Cat();
     ~Cat();
     void makeSound() const;

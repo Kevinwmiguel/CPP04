@@ -1,6 +1,6 @@
 NAME	 =	Idontwanttosettheworldonfire
 
-SRCS     =	Cat.cpp Dog.cpp Animal.cpp main.cpp
+SRCS     =	Brain.cpp Cat.cpp Dog.cpp Animal.cpp main.cpp
 
 OBJDIR  =	obj
 OBJS     =  $(addprefix $(OBJDIR)/, $(SRCS:.cpp=.o))
@@ -23,7 +23,8 @@ clean:
 
 fclean: clean
 	rm -f $(NAME)
-
+	rmdir $(OBJDIR)
+	
 re: fclean all
 
 .PHONY: all clean fclean re

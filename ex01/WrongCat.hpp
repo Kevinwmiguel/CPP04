@@ -6,7 +6,7 @@
 /*   By: kwillian <kwillian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/11 13:39:03 by kwillian          #+#    #+#             */
-/*   Updated: 2026/06/11 13:40:47 by kwillian         ###   ########.fr       */
+/*   Updated: 2026/06/11 20:43:29 by kwillian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,16 @@
 
 #include <iostream>
 #include <string>
+#include "WrongAnimal.hpp"
 
-class WrongCat
+class WrongCat : public WrongAnimal
 {
-    
+    public:
+    WrongCat();
+    ~WrongCat();
+    void makeSound() const;
+    WrongCat&operator=(const WrongCat& other);
+    WrongCat(const WrongCat& other);
 };
 
 #endif

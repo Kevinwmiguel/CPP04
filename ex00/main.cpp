@@ -6,13 +6,15 @@
 /*   By: kwillian <kwillian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/10 02:12:30 by kwillian          #+#    #+#             */
-/*   Updated: 2026/06/11 15:12:20 by kwillian         ###   ########.fr       */
+/*   Updated: 2026/06/11 21:18:06 by kwillian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Animal.hpp"
 #include "Dog.hpp"
 #include "Cat.hpp"
+#include "WrongAnimal.hpp"
+#include "WrongCat.hpp"
 
 int main()
 {
@@ -70,6 +72,19 @@ int main()
         zoo[i]->makeSound();
     }
 
+    std::cout << "\n========== WRONG POLYMORPHISM ==========\n" << std::endl;
+
+    const WrongAnimal* zooo[4];
+    zooo[0] = new WrongCat();
+    zooo[1] = new WrongCat();
+    zooo[2] = new WrongCat();
+
+    for (int i = 0; i < 3; i++)
+    {
+        std::cout << "[" << i << "] " << zooo[i]->getType() << ": ";
+        zooo[i]->makeSound();
+    } 
+    
     std::cout << "\n========== DESTRUCTION ==========\n" << std::endl;
 
     delete animal;

@@ -6,7 +6,7 @@
 /*   By: kwillian <kwillian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/11 15:19:24 by kwillian          #+#    #+#             */
-/*   Updated: 2026/06/11 15:20:02 by kwillian         ###   ########.fr       */
+/*   Updated: 2026/06/11 22:23:24 by kwillian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,5 +17,52 @@
 
 int main()
 {
-    return (0);
+    std::cout << "========== TEST 1: POLYMORPHISM ARRAY ==========\n" << std::endl;
+
+    Animal* animal[10];
+
+    for (int i = 0; i < 10; i++)
+    {
+    if (i < 5)
+    animal[i] = new Dog();
+    else
+    animal[i] = new Cat();
+    }
+
+    std::cout << "\n--- Making sounds ---" << std::endl;
+    for (int i = 0; i < 10; i++)
+    {
+    std::cout << "[" << i << "] ";
+    animal[i]->makeSound();
+    }
+
+    std::cout << "\n--- Deleting animals (polymorphism test - proper destructors called) ---" << std::endl;
+    for (int i = 0; i < 10; i++)
+    delete animal[i];
+
+    std::cout << "\n========== TEST 2: DEEP COPY - DOG (Copy Constructor) ==========\n" << std::endl;
+    Dog dog1;
+    Dog dog2(dog1);
+    std::cout << "If no crash/memory error, deep copy worked!" << std::endl;
+
+    std::cout << "\n========== TEST 3: DEEP COPY - DOG (Assignment Operator) ==========\n" << std::endl;
+    Dog dog3;
+    Dog dog4;
+    dog4 = dog3;
+    std::cout << "If no crash/memory error, deep copy worked!" << std::endl;
+
+    std::cout << "\n========== TEST 4: DEEP COPY - CAT (Copy Constructor) ==========\n" << std::endl;
+    Cat cat1;
+    Cat cat2(cat1);
+    std::cout << "If no crash/memory error, deep copy worked!" << std::endl;
+
+    std::cout << "\n========== TEST 5: DEEP COPY - CAT (Assignment Operator) ==========\n" << std::endl;
+    Cat cat3;
+    Cat cat4;
+    cat4 = cat3;
+    std::cout << "If no crash/memory error, deep copy worked!" << std::endl;
+
+    std::cout << "\n========== DESTRUCTION (END OF PROGRAM - Check order) ==========\n" << std::endl;
+
+return (0);
 }

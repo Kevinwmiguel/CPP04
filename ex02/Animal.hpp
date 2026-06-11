@@ -1,31 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Brain.hpp                                          :+:      :+:    :+:   */
+/*   Animal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kwillian <kwillian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/11 15:16:45 by kwillian          #+#    #+#             */
-/*   Updated: 2026/06/11 21:47:41 by kwillian         ###   ########.fr       */
+/*   Created: 2026/06/10 01:30:53 by kwillian          #+#    #+#             */
+/*   Updated: 2026/06/11 22:37:15 by kwillian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef BRAIN_HPP
-#define BRAIN_HPP
+#ifndef ANIMAL_HPP
+#define ANIMAL_HPP
 
 #include <iostream>
-#include <cctype>
-#include "Animal.hpp"
+#include <string>
 
-class Brain 
+class Animal
 {
-    public:
-    std::string ideas[100]; 
+    protected:
+    std::string type;
 
-    Brain();
-    ~Brain();
-    Brain&operator=(const Brain& other);
-    Brain(const Brain& other);
+    public:
+    Animal();
+    virtual ~Animal();
+    Animal&operator=(const Animal& other);
+    Animal(const Animal&other);
+    
+    virtual void makeSound() const = 0; // ← Pure virtual (no implementation)
+    std::string getType() const;
 };
 
 #endif

@@ -1,8 +1,9 @@
 NAME	 =	Abstractclass
 
-SRCS     =	Cat.cpp Dog.cpp Animal.cpp main.cpp
+SRCS     =	Brain.cpp Cat.cpp Dog.cpp Animal.cpp main.cpp
 
-OBJS     =   $(SRCS:.cpp=.o)
+OBJDIR  =	obj
+OBJS     =  $(addprefix $(OBJDIR)/, $(SRCS:.cpp=.o))
 
 CXX		=	c++
 CXXFLAGS	=	-Wall -Wextra -Werror -std=c++98
@@ -13,11 +14,17 @@ all : $(NAME)
 $(NAME): $(OBJS)
 	$(CXX) $(CXXFLAGS) $(OBJS) -o $(NAME)
 	@printf "Compiling \nDone\n"
+
+$(OBJDIR)/%.o: %.cpp
+	@mkdir -p $(OBJDIR)
+	$(CXX) $(CXXFLAGS) -c $< -o $@
+
 clean:
 	rm -f $(OBJS)
 
 fclean: clean
 	rm -f $(NAME)
+	rmdir $(OBJDIR)
 
 re: fclean all
 
