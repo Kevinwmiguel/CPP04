@@ -6,7 +6,7 @@
 /*   By: kwillian <kwillian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/11 11:24:25 by kwillian          #+#    #+#             */
-/*   Updated: 2026/06/11 15:11:22 by kwillian         ###   ########.fr       */
+/*   Updated: 2026/06/12 16:49:55 by kwillian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 Dog::Dog()
 {
+    this->type = "Dog";
     std::cout << "Dog default constructor has been called" << std::endl;
 }
 

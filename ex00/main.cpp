@@ -6,7 +6,7 @@
 /*   By: kwillian <kwillian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/10 02:12:30 by kwillian          #+#    #+#             */
-/*   Updated: 2026/06/11 21:18:06 by kwillian         ###   ########.fr       */
+/*   Updated: 2026/06/12 16:44:27 by kwillian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,7 +92,10 @@ int main()
     delete cat;
 
     for (int i = 0; i < 4; i++)
+    {
+        delete zooo[i];
         delete zoo[i];
+    }
 
     return 0;
 }

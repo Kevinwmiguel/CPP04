@@ -6,7 +6,7 @@
 /*   By: kwillian <kwillian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/11 12:08:56 by kwillian          #+#    #+#             */
-/*   Updated: 2026/06/11 22:21:30 by kwillian         ###   ########.fr       */
+/*   Updated: 2026/06/12 17:02:00 by kwillian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,9 @@ class Cat : public Animal
     void makeSound() const;
     Cat&operator=(const Cat& other);
     Cat(const Cat& other);
+
+    void setIdeas(int index, std::string thought);
+    std::string getIdeas(int index) const;
 };
 
 #endif

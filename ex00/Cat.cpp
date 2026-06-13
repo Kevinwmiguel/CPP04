@@ -6,7 +6,7 @@
 /*   By: kwillian <kwillian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/11 13:41:13 by kwillian          #+#    #+#             */
-/*   Updated: 2026/06/11 15:11:13 by kwillian         ###   ########.fr       */
+/*   Updated: 2026/06/12 16:45:14 by kwillian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,14 @@
 
 Cat::Cat()
 {
+    this->type = "Cat";
     std::cout << "Cat default constructor has been called" << std::endl;
 }
 
 Cat:: Cat(const Cat& other) : Animal(other)
 {
     *this = other;
+    this->type = other.type;
     std::cout << "Cat Copy constructor has been called" << std::endl;
 }
 

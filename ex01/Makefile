@@ -23,8 +23,8 @@ clean:
 
 fclean: clean
 	rm -f $(NAME)
-	rmdir $(OBJDIR)
-	
+	rm -fr $(OBJDIR)
+
 re: fclean all
 
 .PHONY: all clean fclean re

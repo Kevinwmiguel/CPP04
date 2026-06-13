@@ -24,7 +24,7 @@ clean:
 
 fclean: clean
 	rm -f $(NAME)
-	rmdir $(OBJDIR)
+	rm -rf $(OBJDIR)
 
 re: fclean all
 

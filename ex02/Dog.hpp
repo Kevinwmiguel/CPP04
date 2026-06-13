@@ -6,7 +6,7 @@
 /*   By: kwillian <kwillian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/11 11:24:45 by kwillian          #+#    #+#             */
-/*   Updated: 2026/06/11 22:21:37 by kwillian         ###   ########.fr       */
+/*   Updated: 2026/06/12 17:20:09 by kwillian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,8 @@ class Dog : public Animal
     void makeSound() const;
     Dog&operator=(const Dog& other);
     Dog(const Dog& other);
+    void setIdeas(int index, std::string thought);
+    std::string getIdeas(int index) const;
 };
 
 #endif

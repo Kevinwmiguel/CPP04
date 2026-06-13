@@ -6,7 +6,7 @@
 /*   By: kwillian <kwillian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/11 15:19:24 by kwillian          #+#    #+#             */
-/*   Updated: 2026/06/11 22:23:24 by kwillian         ###   ########.fr       */
+/*   Updated: 2026/06/12 17:15:09 by kwillian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,17 +49,29 @@ int main()
     Dog dog3;
     Dog dog4;
     dog4 = dog3;
-    std::cout << "If no crash/memory error, deep copy worked!" << std::endl;
-
+    std::cout << "\nIf no crash/memory error, deep copy worked!" << std::endl;
+    
     std::cout << "\n========== TEST 4: DEEP COPY - CAT (Copy Constructor) ==========\n" << std::endl;
     Cat cat1;
+    cat1.setIdeas(0, " MEOW MEOW ");
+    
     Cat cat2(cat1);
     std::cout << "If no crash/memory error, deep copy worked!" << std::endl;
-
+    cat2.setIdeas(0, "QUE CALOR BIXO...OPA MEOW MEO2");
+    
+    std::cout << "\n\n NOW ITS TIME 1::  " << cat1.getIdeas(0) << std::endl;
+    std::cout << "\n\n NOW ITS TIME 2::  " << cat2.getIdeas(0) << std::endl;
+    
     std::cout << "\n========== TEST 5: DEEP COPY - CAT (Assignment Operator) ==========\n" << std::endl;
     Cat cat3;
     Cat cat4;
     cat4 = cat3;
+
+    cat3.setIdeas(0, "I WOULD PREFER A SOUP");
+    cat4.setIdeas(0, "I LIKE FISH");
+    std::cout << "\n NOW ITS TIME 1::  " << cat3.getIdeas(0) << std::endl;
+    std::cout << "\n NOW ITS TIME 2::  " << cat4.getIdeas(0) << std::endl;
+
     std::cout << "If no crash/memory error, deep copy worked!" << std::endl;
 
     std::cout << "\n========== DESTRUCTION (END OF PROGRAM - Check order) ==========\n" << std::endl;
