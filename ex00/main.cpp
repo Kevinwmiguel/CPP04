@@ -6,7 +6,7 @@
 /*   By: kwillian <kwillian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/10 02:12:30 by kwillian          #+#    #+#             */
-/*   Updated: 2026/06/12 16:44:27 by kwillian         ###   ########.fr       */
+/*   Updated: 2026/06/14 23:45:23 by kwillian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,6 +78,7 @@ int main()
     zooo[0] = new WrongCat();
     zooo[1] = new WrongCat();
     zooo[2] = new WrongCat();
+    zooo[3] = new WrongCat();
 
     for (int i = 0; i < 3; i++)
     {

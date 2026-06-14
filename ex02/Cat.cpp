@@ -6,7 +6,7 @@
 /*   By: kwillian <kwillian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/11 13:41:13 by kwillian          #+#    #+#             */
-/*   Updated: 2026/06/12 17:20:55 by kwillian         ###   ########.fr       */
+/*   Updated: 2026/06/14 23:43:58 by kwillian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ Cat::Cat()
 
 Cat:: Cat(const Cat& other) : Animal(other)
 {
+    this->type = "Cat";
     this->atribute = new Brain(*other.atribute);
     this->type = other.type;
     std::cout << "Cat Copy constructor has been called" << std::endl;

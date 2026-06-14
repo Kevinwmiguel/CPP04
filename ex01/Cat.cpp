@@ -6,7 +6,7 @@
 /*   By: kwillian <kwillian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/11 13:41:13 by kwillian          #+#    #+#             */
-/*   Updated: 2026/06/12 17:02:10 by kwillian         ###   ########.fr       */
+/*   Updated: 2026/06/14 23:43:12 by kwillian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,12 +30,14 @@ void    Cat::setIdeas(int index, std::string thought)
 Cat::Cat()
 {
     this->atribute = new Brain();
+    this->type = "Cat";
     std::cout << "Cat default constructor has been called" << std::endl;
 }
 
 Cat:: Cat(const Cat& other) : Animal(other)
 {
     this->atribute = new Brain(*other.atribute);
+    this->type = "Cat";
     std::cout << "Cat Copy constructor has been called" << std::endl;
 }
 
@@ -50,6 +52,7 @@ Cat& Cat::operator=(const Cat& other)
     if (this != &other)
     {
         delete this->atribute;
+        this->type = "Cat";
         this->type = other.type;
         this->atribute = new Brain(*other.atribute);
     }
